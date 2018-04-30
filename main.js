@@ -1,7 +1,7 @@
 // const allTweets = [...document.querySelectorAll('.TweetTextSize')];
 const allTweets = [document.querySelector('.TweetTextSize')];
 allTweets.map(async function (p) {
-  const url = `https://apis.paralleldots.com/v3/sentiment?text=${p.innerText}&api_key=NOT_TODAY_MY_FRIENDS`;
+  const url = `https://apis.paralleldots.com/v3/sentiment?text=${p.innerText}&api_key=ksfXrGlQnbn5jrJQBiGvxS0gdFVI8oHm6S3ZAxGz9EM`;
   const response = await fetch(url, { method:'POST' }).then(res => res.json());
   const colors = {
     positive: 'green',

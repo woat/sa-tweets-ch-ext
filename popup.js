@@ -1,11 +1,15 @@
-let changeColor = document.getElementById('changeColor');
+let twitter = document.getElementById('twitter');
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
+// chrome.storage.sync.get('color', function(data) {
+//   changeColor.style.backgroundColor = data.color;
+//   changeColor.setAttribute('value', data.color);
+// });
+
+chrome.tabs.onUpdated.addListener(function () {
+  console.log('update')
 });
 
-changeColor.onclick = function(element) {
+twitter.onclick = function(element) {
   const allTweets = [...document.querySelectorAll('.TweetTextSize')];
   allTweets.map(p => p.innerHTML += '<p>owo</p>');
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
