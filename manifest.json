@@ -1,6 +1,6 @@
 {
   "name": "Sentiment Analysis",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Use data driven sentiment analysis to analyze text.",
   "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
   "options_page": "options.html",
